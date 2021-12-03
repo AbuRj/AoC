@@ -1,21 +1,21 @@
+/[03]
+/a/3923414
+a:.'" ",''0:`d03.txt
+g:(500)<+/'+a;e:~g;(2/g)*(2/e)
+
+/b/
+
+
 /[02]
 /a/1714950
 a:.'" "\'"`",'0:`d02.txt
-u:+/a[&`up=a[;0]][;1]
-d:+/a[&`down=a[;0]][;1]
-f:+/a[&`forward=a[;0]][;1]
-f*(d-u)
+ax:{+/a[&x=a[;0]][;1]};ax[`forward]*(ax[`down]-ax[`up])
 
 /b/1281977850
-d:`down=a[;0]
-u:-`up=a[;0]
-aim:+\(u*a[;1])+(d*a[;1])
-
-aa:+(a[;0];a[;1];aim)
-dep:aa[&`forward=aa[;0]]
-depth:+/dep[;1]*dep[;2]
-f:+/a[&`forward=a[;0]][;1]
-depth*f
+bx:{(x=a[;0])*a[;1]}
+b:+(a[;0];a[;1];+\bx[`down]-bx[`up])
+d:b[&`forward=b[;0]]
+ax[`forward]*(+/d[;1]*d[;2])
 
 /[01]
 /a/1162
